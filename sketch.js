@@ -20,8 +20,9 @@ function setup(){
 	createCanvas(windowWidth, windowHeight);
 	background(0);
 	blendMode(ADD);
-	let hFraq = 0.2;
-	let wFraq = 0.3;
+	let WplusH = width+height;
+	let hFraq = (width/WplusH)*0.5;
+	let wFraq = (height/WplusH)*0.5;
 	for(let i = 0; i < total*hFraq; i++){
 		particles.push(new Particle(
 			0,
