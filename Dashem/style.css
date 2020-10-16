@@ -2,6 +2,14 @@
     font-family: 'Inconsolata', monospace;
 }
 
+a {
+    color: #e60;
+    transition: 0.2s;
+}
+a:hover {
+    color: #00f;
+}
+
 .main-container {
     margin: 4vmin 4vmin;
     background-color: #eee;
