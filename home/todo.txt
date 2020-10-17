@@ -1,0 +1,5 @@
+[ ] profile pic
+[ ] name, email address
+[ ] about information
+[ ] social platforms
+[ ] project cards (dynamic number of cards linking to my projects)
