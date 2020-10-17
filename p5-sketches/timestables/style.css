@@ -1,0 +1,37 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #333333;
+}
+
+canvas {
+    display: block;
+}
+
+.ui-container {
+    padding:8px;
+    width:fit-content;
+    margin-left:50%;
+    transform: translateX(-50%);
+}
+
+input{
+    padding:8px 12px;
+    font-size: 18px;
+    background-color: #333333;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    color: #eee;
+    outline:none;
+    transition: 0.2s;
+}
+input:hover {
+    background-color: rgb(80, 233, 157);
+    border-color: rgb(80, 233, 157);;
+    color: #333333;
+}
+
+#factor {
+    width:48px;
+    
+}
