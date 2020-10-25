@@ -24,22 +24,22 @@ img {
 }
 .picture-container#profile-logo{
     padding:4px;
-    width: 121px;
-    height: 121px;
+    width: 1.2in;
+    height: 1.22in;
     border-radius: 64px;
     background-color: #fff;
     box-shadow: 0 16px 32px #0002;
-    margin: 0 8px;
+    margin: 0 0.1in;
 }
 
 .profile>.container {
     display: flex;
     width: fit-content;
-    padding: 16px;
+    padding: 0.1in;
     border: 1px solid #ecddcc;
     background-color:#ecddcc;
-    border-radius: 32px;
-    box-shadow: 0 16px 32px #0002;
+    border-radius: 0.3in;
+    box-shadow: 0 0.15in 0.3in #0002;
 }
 
 .profile {
@@ -48,7 +48,7 @@ img {
 }
 
 .name-email { 
-    margin: 0 8px;
+    margin: 0 0.1in;
     display: flex;
     flex-direction: column;
     height:128px;
@@ -57,7 +57,7 @@ img {
 
 .vertical-line{
     height:80%;
-    margin: 16px;
+    margin: 0.2in 0.1in;
     width: 1px;
     content: " ";
     background-color: #0004;
@@ -72,4 +72,24 @@ img {
     width:100%;
     height:422px;
     background-image: linear-gradient(90deg, #e4d6c6 0%, #e4d6c600 10%, #e4d6c600 90%, #e4d6c6 100%);
+}
+
+
+.ar-demo-link>a>.container{
+    width:fit-content;
+    padding: 0.3in;
+    margin: 0.3in 0;
+    border: 1px solid #333333;
+    background-color:#333333;
+    border-radius: 0.3in;
+    box-shadow: 0 0.15in 0.3in #0002;
+}
+.ar-demo-link >a>.container{
+    color: #fff;
+    text-decoration: none;
+}
+
+.ar-demo-link {
+    display: flex;
+    justify-content: center;
 }
