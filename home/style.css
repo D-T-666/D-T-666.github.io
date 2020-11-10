@@ -62,16 +62,10 @@ img {
     content: " ";
     background-color: #0004;
 }
+
 .project-cards {
     position: relative;
-    overflow: hidden;
-}
-.project-cards::before {
-    position: absolute;
-    content: " ";
-    width:100%;
-    height:422px;
-    background-image: linear-gradient(90deg, #e4d6c6 0%, #e4d6c600 10%, #e4d6c600 90%, #e4d6c6 100%);
+    /* overflow: hidden; */
 }
 
 

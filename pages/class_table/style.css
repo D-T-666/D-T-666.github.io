@@ -1,0 +1,36 @@
+td.title {
+    text-align: center;
+}
+
+td {
+    position: relative;
+    padding: 6px 12px;
+    box-sizing: border-box;
+}
+
+.sub-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+}
+
+table {
+    width: fit-content;
+    margin: 12px;
+    border-radius: 26px;
+    overflow: hidden;
+    padding: 6px 6px 14px 6px;
+    /* box-sizing: border-box; */
+    border: 1px solid #000;
+}
+
+td::after {
+    content:" ";
+    width: 80%;
+    height:1px;
+    position: absolute;
+    top:100%;
+    left:10%;
+    border-bottom: 1px solid #000;
+}
