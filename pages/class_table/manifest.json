@@ -1,0 +1,10 @@
+{
+    "name": "XI-3 კლასის ონლაინ გაკვეთილების ცხრილი",
+    "short_name": "ცხრილი",
+    "description": "XI-3 კლასის ონლაინ გაკვეთილების ცხრილი",
+    "icons": [],
+    "start_url": "/pages/class_table/index.html?addToHome=true",
+    "display": "fullscreen",
+    "theme_color": "#b0ffc5",
+    "background_color": "#222"
+}
