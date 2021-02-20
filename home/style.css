@@ -1,89 +1,105 @@
 * {
-    font-family: 'Inconsolata', monospace;
-    margin: 0;
-    padding: 0;
+	font-family: "Inconsolata", monospace;
+	margin: 0;
+	padding: 0;
 }
 
 body {
-    background-color: #e4d6c6;
+	background-color: #e4d6c6;
 }
 
 .main-container {
-    padding: 32px;
+	padding: 32px;
 }
 
 img {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    border-spacing: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	border-spacing: 0;
 }
 
-.picture-container#profile-logo>img{
-    border-radius: 60px;
+.picture-container#profile-logo > img {
+	border-radius: 60px;
 }
-.picture-container#profile-logo{
-    padding:4px;
-    width: 1.2in;
-    height: 1.22in;
-    border-radius: 64px;
-    background-color: #fff;
-    box-shadow: 0 16px 32px #0002;
-    margin: 0 0.1in;
+.picture-container#profile-logo {
+	padding: 4px;
+	width: 1.2in;
+	height: 1.22in;
+	border-radius: 64px;
+	background-color: #fff;
+	box-shadow: 0 16px 32px #0002;
+	margin: 0 0.1in;
 }
 
-.profile>.container {
-    display: flex;
-    width: fit-content;
-    padding: 0.1in;
-    border: 1px solid #ecddcc;
-    background-color:#ecddcc;
-    border-radius: 0.3in;
-    box-shadow: 0 0.15in 0.3in #0002;
+.profile > .container {
+	display: flex;
+	width: fit-content;
+	padding: 0.1in;
+	border: 1px solid #ecddcc;
+	background-color: #ecddcc;
+	border-radius: 0.3in;
+	box-shadow: 0 0.15in 0.3in #0002;
 }
 
 .profile {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
 }
 
-.name-email { 
-    margin: 0 0.1in;
-    display: flex;
-    flex-direction: column;
-    height:128px;
-    justify-content: space-around;
+.name-email {
+	margin: 0 0.1in;
+	display: flex;
+	flex-direction: column;
+	height: 128px;
+	justify-content: space-around;
 }
 
-.vertical-line{
-    height:80%;
-    margin: 0.2in 0.1in;
-    width: 1px;
-    content: " ";
-    background-color: #0004;
+.vertical-line {
+	height: 80%;
+	margin: 0.2in 0.1in;
+	width: 1px;
+	content: " ";
+	background-color: #0004;
 }
 
 .project-cards {
-    position: relative;
-    /* overflow: hidden; */
+	position: relative;
+	/* overflow: hidden; */
 }
 
-
-.ar-demo-link>a>.container{
-    width:fit-content;
-    padding: 0.3in;
-    margin: 0.3in 0;
-    border: 1px solid #333333;
-    background-color:#333333;
-    border-radius: 0.3in;
-    box-shadow: 0 0.15in 0.3in #0002;
-}
-.ar-demo-link >a>.container{
-    color: #fff;
-    text-decoration: none;
+.ar-demo-link > a > .container {
+	width: fit-content;
+	padding: 0.3in;
+	margin: 0.3in 0;
+	border: 1px solid #333333;
+	background-color: #333333;
+	border-radius: 0.3in;
+	box-shadow: 0 0.15in 0.3in #0002;
+	color: #fff;
+	text-decoration: none;
 }
 
 .ar-demo-link {
-    display: flex;
-    justify-content: center;
+	display: flex;
+	justify-content: center;
+}
+
+.cxrili-card {
+	display: flex;
+	justify-content: center;
+}
+
+.cxrili-card > a > .container {
+	width: fit-content;
+	padding: 0.3in;
+	margin: 0.3in 0;
+	border: 1px solid #333333;
+	background-color: #333333;
+	border-radius: 0.3in;
+	box-shadow: 0 0.15in 0.3in #0002;
+	color: #fff;
+}
+.cxrili-card > a > .container > h1 {
+	text-decoration: none;
 }
