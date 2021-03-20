@@ -15,6 +15,7 @@ body {
 hr {
 	border-style: solid;
 	border-top: none;
+	margin: 1rem 0rem;
 }
 
 img {
@@ -25,12 +26,31 @@ a {
 	color: var(--dark);
 }
 
+.flat {
+	text-decoration: none;
+}
+
 mark {
 	background-color: transparent;
 	border: 1px solid var(--dark);
 	border-radius: 3px;
 	padding: 0.1ch 0.6ch;
 	text-decoration: none;
+}
+
+section {
+	font-family: "Inconsolata", monospace;
+	border: 1px solid var(--dark);
+	color: var(--dark);
+	padding: 1rem 2rem 2rem 2rem;
+	margin: 1rem;
+	line-height: 140%;
+	text-indent: 3ch;
+}
+
+p {
+	text-align: justify;
+	margin: 0em;
 }
 
 /*  */
@@ -40,16 +60,7 @@ mark {
 	max-width: 76ch;
 }
 
-section {
-	font-family: "Inconsolata", monospace;
-	border: 1px solid var(--dark);
-	color: var(--dark);
-	padding: 1rem 2rem;
-	margin: 1rem;
-	line-height: 140%;
-	text-indent: 3ch;
-	text-align: justify;
-}
+/*  */
 
 @media only screen and (orientation: portrait) {
 	body {
@@ -59,7 +70,7 @@ section {
 
 	section {
 		margin: 0.8rem;
-		padding: 0.6rem 1.2rem;
+		padding: 0.6rem 1.2rem 1.2rem 1.2rem;
 	}
 }
 
@@ -69,10 +80,11 @@ section {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
+		justify-content: space-between;
 	}
 
 	section {
-		max-width: calc(50% - 6rem);
+		width: calc(50% - 6.5rem);
 		flex-grow: 1;
 		flex-shrink: 1;
 	}
