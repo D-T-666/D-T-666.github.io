@@ -26,6 +26,10 @@ a {
 	color: var(--dark);
 }
 
+ul {
+	line-height: 170%;
+}
+
 .flat {
 	text-decoration: none;
 }
@@ -44,8 +48,8 @@ section {
 	color: var(--dark);
 	padding: 1rem 2rem 2rem 2rem;
 	margin: 1rem;
-	line-height: 140%;
-	text-indent: 3ch;
+	line-height: 150%;
+	text-indent: 2ch;
 }
 
 p {
@@ -84,7 +88,7 @@ p {
 	}
 
 	section {
-		width: calc(50% - 6.5rem);
+		max-width: calc(50% - 6.5rem);
 		flex-grow: 1;
 		flex-shrink: 1;
 	}
