@@ -1,0 +1,54 @@
+$dark: #212420;
+$white: #d8c2c2;
+$block: #393b3048;
+$text: #dabfa7;
+$text-highlight: #d36a3a;
+$hr: #474950;
+
+body {
+  background-color: $dark;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+
+  #main-content {
+    background-color: $block;
+    color: $text;
+    border-radius: 1rem;
+
+    max-width: 80ch;
+
+    padding: 1rem 2rem;
+
+    font-family: monospace;
+
+    h1 {
+      font-weight: lighter;
+      text-align: center;
+    }
+
+    a {
+      color: $text-highlight;
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid $hr;
+    }
+
+    table {
+      th {
+        background-color: $hr;
+        padding: 0.4rem;
+      }
+      td {
+        background-color: $block;
+        padding: 0.4rem;
+      }
+    }
+  }
+}
