@@ -1,12 +1,14 @@
 body {
-  background-color: #212420;
+  background-color: #1a1b18;
   display: flex;
   justify-content: center;
   padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: lighter;
 }
 body #main-content {
-  background-color: #393b3048;
-  color: #dabfa7;
+  background-color: #242520;
+  color: #d6ae7f;
   border-radius: 1rem;
   max-width: 80ch;
   padding: 1rem 2rem;
@@ -17,7 +19,11 @@ body #main-content h1 {
   text-align: center;
 }
 body #main-content a {
-  color: #d36a3a;
+  color: #d75c23;
+  text-decoration: none;
+}
+body #main-content a:hover {
+  text-decoration: underline;
 }
 body #main-content ul {
   padding-left: 1.5rem;
@@ -31,6 +37,6 @@ body #main-content table th {
   padding: 0.4rem;
 }
 body #main-content table td {
-  background-color: #393b3048;
+  background-color: #242520;
   padding: 0.4rem;
 }/*# sourceMappingURL=style.css.map */

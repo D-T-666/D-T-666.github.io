@@ -1,8 +1,8 @@
-$dark: #212420;
+$dark: #1a1b18;
 $white: #d8c2c2;
-$block: #393b3048;
-$text: #dabfa7;
-$text-highlight: #d36a3a;
+$block: #242520;
+$text: #d6ae7f;
+$text-highlight: hsl(19, 72%, 49%);
 $hr: #474950;
 
 body {
@@ -10,6 +10,8 @@ body {
   display: flex;
   justify-content: center;
   padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: lighter;
 
   #main-content {
     background-color: $block;
@@ -29,6 +31,11 @@ body {
 
     a {
       color: $text-highlight;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
     ul {
