@@ -14,11 +14,11 @@ My hobbies include obsessing over spaceflight and rocketry, drawing, doing fun m
 
 ### My projects:
 
-- [cxrili](/cxrili/")
-- [ugly sweater collapse](https://sweatercollapse.space/")
-- [rocket sim](https://github.com/D-T-666/rocket-sim")
-- [3D renderer using python turtle](https://github.com/D-T-666/3D-turtle")
-- [pixelGameEngine raytracer](https://github.com/D-T-666/pixelGameEngine-raytracer")
+- [cxrili](https://cxrili.netlify.app)
+- [ugly sweater collapse](https://sweatercollapse.space/)
+- [rocket sim](https://github.com/D-T-666/rocket-sim)
+- [3D renderer using python turtle](https://github.com/D-T-666/3D-turtle)
+- [pixelGameEngine raytracer](https://github.com/D-T-666/pixelGameEngine-raytracer)
 
 ---
 
@@ -36,6 +36,7 @@ My hobbies include obsessing over spaceflight and rocketry, drawing, doing fun m
 - Email: [tabatadzedima20@gmail.com](mailto:tabatadzedima20@gmail.com)
 - Twitter: [@Dmtri_Tabatadze](https://twitter.com/Dmtri_Tabatadze)
 - Github: [D-T-666](https://github.com/D-T-666)
+- matrix: [@DimitriT:matrix.org](https://matrix.to/#/@dimitrit:matrix.org)
 
 ---
 
