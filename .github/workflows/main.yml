@@ -16,7 +16,11 @@ jobs:
     steps:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: npm install
+      - working-directory: ./content
+        run: ls
+      
+      - working-directory: ./content
+        run: pwd
       - working-directory: ./content
         run: for f in *.md; do name=${f%.md}; npm run marked -o ${name}.html -i ${name}.md; done
