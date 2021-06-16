@@ -19,7 +19,5 @@ jobs:
         uses: actions/setup-node@v1
       # - name: Setup Node.js environment
       #   uses: actions/setup-node@v2.1.5
-      # - run: npm install
-      - run: npx install marked
-      - working-directory: ./content
-        run: for f in *.md; do name=${f%.md}; npx marked -o ${name}.html -i ${name}.md; done
+      - run: npm install
+      - run: npm run render-md
