@@ -17,14 +17,8 @@ jobs:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
-      - working-directory: ./content
-        run: ls
-      - working-directory: ./content
-        run: pwd
 #       - name: Setup Node.js environment
 #         uses: actions/setup-node@v2.1.5
       - run: npm install
       - working-directory: ./content
-        run: echo ls *.md
-      - working-directory: ./content
-        run: for f in *.md; do name=${f%.md}; npm run marked -o ${name}.html -i ${name}.md; done
+        run: for f in *.md; do name=${f%.md}; marked -o ${name}.html -i ${name}.md; done
