@@ -17,6 +17,7 @@ jobs:
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
       - run: npm install
-      - run: |
-          cd content
-          for f in *.md; do name=${f%.md}; npm run marked -o ${name}.html -i ${name}.md; done
+      - working-directory: ./content
+        run: echo ls *.md
+      - working-directory: ./content
+        run: for f in *.md; do name=${f%.md}; npm run marked -o ${name}.html -i ${name}.md; done
