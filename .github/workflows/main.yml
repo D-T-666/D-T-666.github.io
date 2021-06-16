@@ -14,6 +14,8 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v2.1.5
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-      - run: npm i -g marked
-      - run: or f in *.md; do name=${f%.md}; marked -o ${name}.html -i ${name}.md; done
+      - run: npx i -g marked
+      - run: or f in *.md; do name=${f%.md}; npx marked -o ${name}.html -i ${name}.md; done
