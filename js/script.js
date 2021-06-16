@@ -4,6 +4,6 @@
   fetch(`./content/${file}.html`)
     .then((data) => data.text())
     .then((content) => {
-      document.getElementById("main-content").innerHTML = marked(content);
+      document.getElementById("main-content").innerHTML = content;
     });
 })();
