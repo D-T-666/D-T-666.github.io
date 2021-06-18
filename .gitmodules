@@ -1,0 +1,6 @@
+[submodule "cxrili"]
+	path = cxrili
+	url = https://github.com/D-T-666/cxrili
+[submodule "homepage"]
+	path = homepage
+	url = https://github.com/D-T-666/homepage

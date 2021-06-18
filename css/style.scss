@@ -1,0 +1,61 @@
+$dark: #1a1b18;
+$white: #d8c2c2;
+$block: #242520;
+$text: #d6ae7f;
+$text-highlight: hsl(19, 72%, 49%);
+$hr: #474950;
+
+body {
+  background-color: $dark;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  font-weight: lighter;
+
+  #main-content {
+    background-color: $block;
+    color: $text;
+    border-radius: 1rem;
+
+    max-width: 80ch;
+
+    padding: 1rem 2rem;
+
+    font-family: monospace;
+
+    h1 {
+      font-weight: lighter;
+      text-align: center;
+    }
+
+    a {
+      color: $text-highlight;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    hr {
+      border: none;
+      border-top: 2px solid $hr;
+    }
+
+    table {
+      th {
+        background-color: $hr;
+        padding: 0.4rem;
+      }
+      td {
+        background-color: $block;
+        padding: 0.4rem;
+      }
+    }
+  }
+}

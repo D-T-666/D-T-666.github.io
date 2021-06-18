@@ -1,0 +1,23 @@
+* {
+    font-family: 'Inconsolata', monospace;
+}
+
+a {
+    color: #e60;
+    transition: 0.2s;
+}
+a:hover {
+    color: #00f;
+}
+
+.main-container {
+    margin: 4vmin 4vmin;
+    background-color: #eee;
+    padding: 2% 4%;
+    border-radius: 8px;
+    box-shadow: 0 16px 32px #0001;
+}
+
+body{
+    background-color: rgb(201, 196, 189);
+}

@@ -1,0 +1,28 @@
+{
+  "name": "d-t-666.github.io",
+  "version": "1.0.0",
+  "description": "my portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "render-md": "cd content && for f in *.md; do name=${f%.md}; marked -o ${name}.html -i ${name}.md; done"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D-T-666/D-T-666.github.io.git"
+  },
+  "keywords": [
+    "portfolio",
+    "github",
+    "pages"
+  ],
+  "author": "Dimitri Tabatadze",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/D-T-666/D-T-666.github.io/issues"
+  },
+  "homepage": "https://d-t-666.github.io",
+  "dependencies": {
+    "marked": "^2.1.1"
+  }
+}
