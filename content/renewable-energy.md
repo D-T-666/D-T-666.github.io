@@ -1,6 +1,6 @@
 # Renewable energy
 
-### key points
+## key points
 
 1. what's renewable energy?
    - doesn't run out
