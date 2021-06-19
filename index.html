@@ -1,17 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D.T.6</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>D.T.6</title>
-				<link rel="stylesheet" href="./css/style.css">
-    </head>
+  <body>
+    <div id="content"></div>
 
-    <body>
-			<div id="content"></div>
+    <script>
+      const file = window.location.hash.substr(1) || "homepage";
 
-			<script src="./js/script.js"></script>
-    </body>
-
+      (async () => {
+        fetch(`content/${file}/index.html`)
+          .then((data) => data.text())
+          .then((content) => {
+            document.getElementById("content").innerHTML = content;
+          });
+      })();
+    </script>
+  </body>
 </html>
