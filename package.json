@@ -23,6 +23,6 @@
   },
   "homepage": "https://d-t-666.github.io",
   "dependencies": {
-    "marked": "^2.1.1"
+    "marked": "^4.0.10"
   }
 }
