@@ -2,9 +2,9 @@
 
 ## Hello there!
 
-I am **Dimitri Tabatadze** (also known as **D.T.6**), and this beautiful website is supposed to be my personal portfolio. I may also write blog-like things here and there. Anyways!
+I am **Dimitri Tabatadze** (also known as _Taraxacum_), and this beautiful website is supposed to be my personal portfolio. I may also write blog-like things here and there. Anyways!
 
-I am a 19 year old developer based in Georgia. I like working with Rust and C/C++! I like tinkering with hard problems, like [landing rockets propulsively](https://github.com/D-T-666/trols), or [using quantum wave function collapse algorithm for generating ugly christmas sweater patterns](https://sweatercollapse.space/?pattern=demo-7.1&n=3&symmetry=0&stitches=1)! I also like working with client side progressive web applications like [cxrili](https://cxrili.netlify.app).
+I am a 19 year old CS student based in Georgia. I like working with Rust, C/C++ and other low level. I like tinkering with hard problems, like [landing rockets propulsively](https://github.com/D-T-666/trols), or [using quantum wave function collapse algorithm for generating ugly christmas sweater patterns](https://sweatercollapse.space/?pattern=demo-7.1&n=3&symmetry=0&stitches=1)! I love doing mathematics in my free time.
 
 I am very much interested in mathematics, spaceflight, playing / making video games, and music.
 
@@ -18,9 +18,9 @@ I am currently in my 3rd year of computer science bachelors at [Kutaisi Internat
 
 ### Work experience:
 
-- _Full Stack Engineer_ at [*NCER*](https://ncer.gov.ge) (the National Center for Educational Research). I'm working on an open source assessment system pipeline for Georgian schools.
-- _Student Assistant_ at [*KIU*](https://kiu.edu.ge) (Kutaisi International Univeristy). I'm a SA in Numerical Linear Algebra.
-- _Creative Junior Developer_ at [*glitch.ge*](https://glitch.ge). Worked on games in JS/TS using [phaser.js](https://phaser.io).
+- _Full Stack Engineer_ at [**NCER**](https://ncer.gov.ge) (the National Center for Educational Research). I'm working on an open source assessment system pipeline for Georgian schools.
+- _Student Assistant_ at [**KIU**](https://kiu.edu.ge) (Kutaisi International Univeristy). I'm a SA in Numerical Linear Algebra.
+- _Creative Junior Developer_ at [**glitch.ge**](https://glitch.ge). Worked on games in JS/TS using [phaser.js](https://phaser.io).
 
 ---
 
