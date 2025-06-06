@@ -1,42 +1,61 @@
-body {
-  background-color: #1a1b18;
-  display: flex;
-  justify-content: center;
-  padding: 2rem;
-  font-size: 1.2rem;
-  font-weight: lighter;
+:root {
+  --dark: #1a1b18;
+  --white: #d8c2c2;
+  --block: #242520;
+  --text: #d6ae7f;
+  --text-highlight: hsl(19, 72%, 49%);
+  --hr: #474950;
+
+  body {
+    background-color: var(--dark);
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+
+    #content {
+      background-color: var(--block);
+      color: var(--text);
+      border-radius: 1rem;
+
+      max-width: 80ch;
+
+      padding: 1rem 2rem;
+
+      font-family: monospace;
+
+      h1 {
+        text-align: center;
+      }
+
+      a {
+        color: var(--text-highlight);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+
+      ul {
+        padding-left: 1.5rem;
+      }
+
+      hr {
+        border: none;
+        border-top: 2px solid var(--hr);
+      }
+
+      table {
+        th {
+          background-color: var(--hr);
+          padding: 0.4rem;
+        }
+        td {
+          background-color: var(--block);
+          padding: 0.4rem;
+        }
+      }
+    }
+  }
 }
-body #content {
-  background-color: #242520;
-  color: #d6ae7f;
-  border-radius: 1rem;
-  max-width: 80ch;
-  padding: 1rem 2rem;
-  font-family: monospace;
-}
-body #content h1 {
-  font-weight: lighter;
-  text-align: center;
-}
-body #content a {
-  color: #d75c23;
-  text-decoration: none;
-}
-body #content a:hover {
-  text-decoration: underline;
-}
-body #content ul {
-  padding-left: 1.5rem;
-}
-body #content hr {
-  border: none;
-  border-top: 2px solid #474950;
-}
-body #content table th {
-  background-color: #474950;
-  padding: 0.4rem;
-}
-body #content table td {
-  background-color: #242520;
-  padding: 0.4rem;
-}/*# sourceMappingURL=style.css.map */
