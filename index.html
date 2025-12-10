@@ -1,25 +1,230 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>D.T.6</title>
-    <link rel="stylesheet" href="./css/style.css" />
-  </head>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div class="column">
+			<section id="about">
+				<h2>About</h2>
+				<p>
+				I am Dimitri Tabatadze (also known as Taraxacum), and this beautiful website
+				is supposed to be my personal portfolio. I may also write blog-like things
+				here and there. Anyways!
+				</p>
 
-  <body>
-    <div id="content"></div>
+				<p>
+				I am a <code id="my-age"></code> year old CS student based in Georgia. I
+				like working with Rust, C/C++ and other low level. I like tinkering with
+				hard problems, like landing rockets propulsively, or using quantum wave
+				function collapse algorithm for generating ugly christmas sweater patterns!
+				I love doing mathematics in my free time.
+				</p>
 
-    <script>
-      const file = window.location.hash.substr(1) || "homepage";
+				<p>
+				I am very much interested in mathematics, spaceflight, playing / making
+				video games, and writing code.
+				</p>
+			</section>
 
-      (async () => {
-        fetch(`content/${file}/index.html`)
-          .then((data) => data.text())
-          .then((content) => {
-            document.getElementById("content").innerHTML = content;
-          });
-      })();
-    </script>
-  </body>
+			<section id="education">
+				<h2>Education</h2>
+
+				<p>
+				I am currently in my 4th year of computer science bachelors at
+				<a href="https://kiu.edu.ge">Kutaisi International University</a>. I am also
+				doing a minor in mathematics. My cumulative GPA up to present is
+				<code>3.68</code>.
+				</p>
+			</section>
+
+			<section id="work-experience">
+				<h2>Work Experience</h2>
+
+				<p>
+				I am currently a full Stack Engineer at <a href="https://ncer.gov.ge">NCER</a>
+				(the National Center for Educational Research). I'm working on an open source
+				assessment system pipeline for Georgian schools.
+				</p>
+
+				<p>
+				I was a Student Assistant at KIU in Numerical Linear Algebra and
+				in Theory of Computation for one semester each.
+				</p>
+
+				<p>
+				Before university, I went through a 3 month trial period Creative Junior
+				Developer at <a href="https://glitch.ge">glitch.ge</a>. There, I worked on
+				web games in JS/TS using phaser.js.
+				</p>
+			</section>
+
+			<section id="life-goals">
+				<h2>Life Goals</h2>
+
+				<p>
+				I present a list of goals for my life. I hereby promise to do everything in
+				my power to keep moving towards these goals.
+				</p>
+
+				<ul>
+					<li>Get a Ph.D.</li>
+					<li>Make a music video with more than 10k views on youtube.</li>
+					<li>Publish a book or a collection of stories I come up with during sleep.</li>
+				</ul>
+			</section>
+
+			<section id="stranger-things">
+				<h2>Stranger Things</h2>
+
+				<p>
+				This is my collection of Stranger Things mini Funko pops that come with Kinder Joy.
+				</p>
+
+				<table class="st-table">
+					<tr>
+						<td><div class="st-atlas" style="--p: 0px 0px;"></div>Pen deco. Demogorgon</td>
+						<td><div class="st-atlas" style="--p: 192px 128px;"></div>Mike</td>
+						<td><div class="st-atlas" style="--p: 64px 192px;"></div>Lucas</td>
+						<td><div class="st-atlas" style="--p: 0px 192px;"></div>Eleven</td>
+						<td><div class="st-atlas" style="--p: 128px 192px;"></div>Hopper</td>
+					</tr>
+					<tr>
+						<td><div class="st-atlas" style="--p: 128px 0px;"></div>Dustin</td>
+						<td colspan="2"><div class="st-atlas" style="--p: 0px 64px;"></div><div class="st-atlas" style="--p: 64px 128px;"></div>Pen deco. Steve and Robin</td>
+						<td><div class="st-atlas" style="--p: 192px 192px;"></div>Cable deco. Erica</td>
+						<td><div class="st-atlas" style="--p: 192px 0px;"></div>Zipper Demogorgon</td>
+					</tr>
+					<tr>
+						<td><div class="st-atlas" style="--p: 128px 128px;"></div>Cable Deco. Upside Down Robin</td>
+						<td><div class="st-atlas" style="--p: 192px 64px;"></div>Upside Down Steve</td>
+						<td><div class="st-atlas" style="--p: 64px 0px;"></div>Upside Dowd Dustin</td>
+						<td><div class="st-atlas" style="--p: 0px 128px;"></div>Upside Down Max</td>
+						<td><div class="st-atlas" style="--p: 64px 64px;"></div>Upside Down Will</td>
+					</tr>
+					<tr>
+						<td><div class="st-atlas" style="--p: 128px 64px;"></div>Phone Stand Vecna</td>
+					</tr>
+				</table>
+			</section>
+		</div> <!-- column -->
+
+		<div class="column">
+			<section id="projects">
+				<h2>Projects</h2>
+
+				<ul>
+					<li><a href="recipes">Recipes</a></li>
+					<li><a href="https://github.com/D-T-666/trols">TRoLS</a></li>
+					<li><a href="https://cxrili.netlify.app">cxrili</a></li>
+					<li><a href="https://sweatercollapse.space/">ugly sweater collapse</a></li>
+					<li><a href="https://github.com/D-T-666/rocket-sim">rocket sim</a></li>
+					<li><a href="https://github.com/D-T-666/3D-turtle">3D renderer using python turtle</a></li>
+					<li><a href="https://github.com/D-T-666/pixelGameEngine-raytracer">Simple raytracer</a></li>
+				</ul>
+			</section>
+
+			<section id="games">
+				<h2>Games</h2>
+
+				<p>
+				I like playing games with friends. Some of the best couch co-op and versus games I've found:
+				</p>
+				<ul>
+					<li><a href="https://store.steampowered.com/app/1445790/Make_Way/">Make Way</a></li>
+					<li><a href="https://store.steampowered.com/app/268910/Cuphead/">Cuphead</a></li>
+					<li><a href="https://store.steampowered.com/app/386940/Ultimate_Chicken_Horse/">Ultimate Chicken Horse</a></li>
+				</ul>
+
+				<p>
+				I've also made some games myself. They're not that good but here they are:
+				</p>
+				<ul>
+					<li><a href="https://dt6.itch.io/dash-em">Dash 'em</a></li>
+					<li><a href="https://dt6.itch.io/purpy">purpy</a></li>
+					<li><a href="https://dt6.itch.io/weel-the-human">Weel the human</a></li>
+				</ul>
+			</section>
+
+			<section id="contact">
+				<h2>Contact Information</h2>
+
+				<ul class="shuffle">
+					<li>Email: <a href="mailto:tabatadzedima@protonmail.com">tabatadzedima@protonmail.com</a></li>
+					<li>Github: <a href="https://github.com/D-T-666">D-T-666</a></li>
+					<li>matrix: <a href="https://matrix.to/#/@dimitrit:matrix.org">@dimitrit:matrix.org</a></li>
+				</ul>
+			</section>
+
+			<section id="friends">
+				<h2>Friends</h2>
+
+				<p>
+				These are the people I would recommend for various things like hiring, collaborating or just hanging out.
+				</p>
+
+				<ul class="shuffle">
+					<li><a href="https://maxi.millian.se">Maximillian Strand</a></li>
+					<li><a href="https://ischa.dev">Ischa Abraham</a></li>
+					<li><a href="https://log.siftheunstable.work">Demetre Lataria</a></li>
+					<li><a href="https://kvisha.com">Sandro Lortkipanidze</a></li>
+					<li><a href="https://github.com/stochastic-batman">Lado Turmanidze</a></li>
+					<li><a href="https://github.com/Otina12">Giorgi Otinashvili</a></li>
+					<li><a href="https://github.com/S4syka">Erekle Khomasuridze</a></li>
+					<li><a href="https://www.linkedin.com/in/giorgi-nadareishvili-661794187/">Giorgi Nadareishvili</a></li>
+					<li><a href="https://github.com/DUT1K1">Davit Maisuradze</a></li>
+					<li><a href="https://github.com/Mariam-Katamashvili">Mariam Katamashvili</a></li>
+				</ul>
+			</section>
+			
+			<section id="math">
+				<h2>Mathematics</h2>
+
+				<p>
+				In my free time I like to think about interesting math problems.
+				Sometimes, I even come up with some of my own.
+				</p>
+
+				<ol>
+					<li>
+						<details>
+							<summary>A problem about projections of a hypercube.</summary>
+
+							<p>
+							You are given a <math><mi>n</mi></math> dimensional hypercube with all
+							vertices painted the same color. You can pick any number of vertices and
+							give them all unique colors. After that, the cube will be taken away,
+							rotated into some orientation and put on a
+							<math><mi>n</mi><mo>-</mo><mn>2</mn></math> dimensional hyperplane so that
+							only one face of the cube will be imprinted on the paper. After that, you
+							will be shown the paper and you will have to be able to align the hypercube 
+							say what the orientation of the cube was when put on the paper. what is
+							the minimum number of vertices you'll need to re-color to be able to
+							tell the orientation every time?
+							</p>
+						</details>
+					</li>
+				</ol>
+			</section>
+		</div> <!-- column -->
+
+		<div class="column">
+		</div>
+
+		<script>
+			// Update my age
+			const myBirthday = new Date(2004, 06, 12);
+			const myAge = new Date(Date.now() - myBirthday.getTime());
+			const myAgeElement = document.getElementById("my-age");
+			myAgeElement.innerText = String(myAge.getUTCFullYear() - 1970);
+
+			// Shuffle friends
+			for (const elt of document.getElementsByClassName("shuffle")) {
+				const list = [...elt.childNodes].sort(() => Math.random() - 0.5);;
+				elt.innerHTML = "";
+				elt.append(...list);
+			}
+		</script>
+	</body>
 </html>

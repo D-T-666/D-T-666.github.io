@@ -1,0 +1,98 @@
+:root {
+	--fg: black;
+	--bg: transparent;
+	--tint: #0002;
+	--section-border: 4px ridge #35a656;
+	--border: 1px solid #35a656;
+}
+
+.dark-theme {
+	--fg: white;
+	--bg: #1b1f1c;
+	--tint: #272e29;
+	--section-border: 4px ridge #633006;
+	--border: 1px solid #633006;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+	--fg: white;
+	--bg: #1b1f1c;
+	--tint: #272e29;
+	--section-border: 4px ridge #633006;
+	--border: 1px solid #633006;
+  }
+}
+
+body {
+	width: fit-content;
+	margin: 20px auto;
+	display: flex;
+	gap: 20px;
+
+	font-family: monospace;
+	font-size: 12px;
+
+	color: var(--fg);
+	background-color: var(--bg);
+}
+
+div.column {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+section {
+	border: var(--section-border);
+	padding: 10px 20px;
+	width: 70ch;
+	box-sizing: content-box;
+}
+
+p {
+	hyphens: auto;
+}
+
+table, th, td {
+	border: var(--border);
+}
+
+details {
+	border: var(--border);
+	padding: 5px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: var(--tint);
+	}
+}
+
+.st-table td {
+	width: 74px;
+	padding: 5px;
+	box-sizing: content-box;
+	text-align: center;
+}
+
+.st-table {
+	vertical-align: start;
+	border: none;
+	margin: auto;
+}
+
+.st-atlas {
+	--p: 0px 0px;
+	background: url("assets/st-atlas.webp");
+	background-size: 256px;
+	display: inline-block;
+	height: 64px;
+	width: 64px;
+	background-position: var(--p);
+
+	& + & {
+		margin-left: 14px;
+	}
+}
+
+
