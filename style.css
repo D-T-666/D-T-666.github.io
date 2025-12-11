@@ -97,7 +97,7 @@ details {
 
 .st-atlas {
 	--p: 0px 0px;
-	background: url("assets/st-atlas-smol.webp");
+	background: url("assets/st-atlas.webp");
 	background-size: 256px;
 	display: inline-block;
 	height: 64px;
