@@ -205,6 +205,181 @@
 							</p>
 						</details>
 					</li>
+					<li>
+						<details open>
+							<summary>A problem about cellular automaton.</summary>
+
+							<p>
+							Automata has 7 states: <math>
+								<mn>0</mn><sub><mi>i</mi></sub>,
+								<mn>0</mn><sub><mi>o</mi></sub>,
+								<mn>0</mn><sub><mi>c</mi></sub>,
+								<mn>0</mn><sub><mi>cc</mi></sub>,
+								<mn>1</mn><sub><mi>o</mi></sub>,
+								<mn>1</mn><sub><mi>c</mi></sub>,
+								<mn>1</mn><sub><mi>cc</mi></sub>.
+							</math>
+							In the table bellow, each row is for the
+							The rules of an automaton are the following:
+							</p>
+
+							<table>
+								<tr>
+									<td></td>
+									<td><var>0<sub>i</sub></var></td>
+									<td><var>X<sub>o</sub></var></td>
+									<td><var>X<sub>c</sub></var></td>
+									<td><var>X<sub>cc</sub></var></td>
+								</tr>
+								<tr>
+									<td><var>0<sub>Y</sub></var></td>
+									<td><var>0<sub>i</sub></var></td>
+									<td><var>0<sub>o</sub></var></td>
+									<td><var>1<sub>o</sub></var></td>
+									<td><var>0<sub>c</sub></var></td>
+								</tr>
+								<tr>
+									<td><var>1<sub>Y</sub></var></td>
+									<td><var>0<sub>cc</sub></var></td>
+									<td><var>1<sub>c</sub></var></td>
+									<td><var>0<sub>cc</sub></var></td>
+									<td><var>1<sub>cc</sub></var></td>
+								</tr>
+							</table>
+
+							<p>
+							This automaton playes out in a 1D grid over time (like Wolfram's
+							<a href="https://en.wikipedia.org/wiki/Elementary_cellular_automaton">elementary CA</a>).
+							We will represent the grid as
+							<math><msubsup><mi>a</mi><mi>n</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></msubsup></math>
+							with <math><mi>t</mi></math> denoting the cell number <math><mi>n</mi></math> at timestep
+							<math><mi>t</mi></math>.
+							To find out the state of a cell 
+							<math><msubsup><mi>a</mi><mi>n</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></msubsup></math>
+							you have to look at cells 
+							<math><msubsup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mrow><mo>(</mo><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow></msubsup></math>
+							and
+							<math><msubsup><mi>a</mi><mi>n</mi><mrow><mo>(</mo><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow></msubsup></math>.
+
+							<table>
+								<tr>
+									<td><math><msubsup><mi>a</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mrow><mo>(</mo><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow></msubsup></math></td>
+									<td><math><msubsup><mi>a</mi><mi>n</mi><mrow><mo>(</mo><mrow><mi>t</mi><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow></msubsup></math></td>
+								</tr>
+								<tr>
+									<td></td>
+									<td><math><msubsup><mi>a</mi><mi>n</mi><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></msubsup></math></td>
+								</tr>
+							</table>
+
+							We set
+							<math display="block">
+								<msubsup><mi>a</mi><mi>n</mi><mrow><mo>(</mo><mn>0</mn><mo>)</mo></mrow></msubsup><mo>=</mo><mn>0</mn>
+								<mo>,</mo>
+								<mspace width="20px"></mspace>
+								<msubsup><mi>a</mi><mn>0</mn><mrow><mo>(</mo><mi>t</mi><mo>)</mo></mrow></msubsup>
+								<mo>=</mo>
+								<mrow><mo>{</mo>
+								<mtable>
+									<mtr>
+										<mtd><msub><mi>b</mi><mi>t</mi></msub></mtd>
+										<mtd><mtext>&#xa0; if &#xa0;</mtext></mtd>
+										<mtd><mrow><mi>t</mi><mo>&leq;</mo><mn>C</mn></mrow></mtd>
+									</mtr>
+									<mtr>
+										<mtd><mn>0</mn></mtd>
+										<mtd><mtext>&#xa0; if &#xa0;</mtext></mtd>
+										<mtd><mrow><mi>t</mi><mo>&gt;</mo><mn>C</mn></mrow></mtd>
+									</mtr>
+								</mtable>
+								</mrow>
+							</math>
+							where <math><mi>b</mi><mo>&in;</mo><msup><mrow><mo>{</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo>}</mo></mrow><mi>C</mi></msup></math> and <math><mi>C</mi><mo>&in;</mo><mi>ℕ</mi></math>.
+							</p>
+
+							<p>
+							We can visualize the run of this CA as a grid, where rows
+							represent time steps and columsn represent the automata.
+							Since we set the <math><mn>0</mn></math>-th cell to some
+							fixed <math><msub><mi>b</mi><mi>t</mi></msub></math>, the
+							first column of the said grid is going to be that exact
+							sequence (for up to <math><mi>C</mi></math> rows).
+							Here's an interactive demo. You can click the cells in the
+							first collumn to change <math><msub><mi>b</mi><mi>t</mi></msub></math>.
+							</p>
+
+							<table id="ca-demo"></table>
+							<script>
+								const n = 15;
+								const m = 30;
+								const grid = [];
+								const tableElement = document.getElementById("ca-demo");
+								const tableBody = document.createElement("tbody");
+								for (let i = 0; i < m; i++) {
+									grid[i] = [];
+									const row = document.createElement("tr");
+
+									for (let j = 0; j <= n; j++) {
+										grid[i][j] = document.createElement("td");
+										row.appendChild(grid[i][j]);
+									}
+									tableBody.appendChild(row);
+								}
+								tableElement.appendChild(tableBody);
+								tableElement.addEventListener("click", (e) => {
+									if (e.target.tagName == "INPUT") {
+										calculate();
+									}
+								})
+								for (let j = 1; j <= n; j++) {
+									grid[0][j].innerHTML = "<var>0<sub>i</sub></var>";
+								}
+								const checkboxes = [];
+								for (let i = 0; i < m; i++) {
+									const checkbox = document.createElement("input");
+									checkbox.type = "checkbox";
+									checkboxes.push(checkbox);
+									const label = document.createElement("label");
+									label.appendChild(checkbox);
+									grid[i][0].appendChild(label);
+								}
+								function calculate() {
+									const g = [];
+									for (let i = 0; i < m; i++) {
+										g[i] = [[checkboxes[i].checked ? 1 : 0]];
+									}
+									for (let j = 1; j <= n; j++) {
+										for (let i = 0; i < m; i++) {
+											const a = (i > 0) ? g[i - 1][j - 1][0] : 0;
+											const b = (i > 0) ? g[i - 1][j][1] : "i";
+											
+											g[i][j] = {
+												"i": [[0, "i"], [0, "cc"]],
+												"o": [[0, "o"], [1, "c"]],
+												"c": [[1, "o"], [0, "cc"]],
+												"cc": [[0, "c"], [1, "cc"]]
+											}[b][a];
+
+											grid[i][j].innerHTML = `<var>${g[i][j][0]}<sub>${g[i][j][1]}</sub></var>`;
+											grid[i][j].dataset.t = String(g[i][j][0]);
+										}
+									}
+								}
+								calculate();
+							</script>
+
+							<p>
+							The question is the following:
+							For what sequence <math><msub><mi>b</mi><mi>t</mi></msub></math>
+							does the automaton have infinitely many rows indexed
+							<math><mi>n</mi></math> such that the number of
+							<math><mn>1</mn></math>s in the rows
+							<math><mi>n</mi><mo>,</mo><mi>n</mi><mo>+</mo><mn>1</mn>
+							</math> and <math><mi>n</mi><mo>+</mo><mn>2</mn></math>
+							is greater than <math><mn>1</mn></math>.
+							</p>
+						</details>
+					</li>
 				</ol>
 			</section>
 		</div> <!-- column -->

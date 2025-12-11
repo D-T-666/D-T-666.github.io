@@ -6,19 +6,11 @@
 	--border: 1px solid #35a656;
 }
 
-.dark-theme {
-	--fg: white;
-	--bg: #1b1f1c;
-	--tint: #272e29;
-	--section-border: 4px ridge #633006;
-	--border: 1px solid #633006;
-}
-
 @media (prefers-color-scheme: dark) {
 	:root {
 		--fg: white;
 		--bg: #1b1f1c;
-		--tint: #272e29;
+		--tint: #333d36;
 		--section-border: 4px ridge #633006;
 		--border: 1px solid #633006;
 	}
@@ -72,12 +64,16 @@ table, th, td {
 	border: var(--border);
 }
 
+table {
+	margin: auto;
+}
+
 details {
 	border: var(--border);
 	padding: 5px;
 	cursor: pointer;
 
-	&:hover {
+	&:has(summary:hover) {
 		background-color: var(--tint);
 	}
 }
@@ -92,7 +88,6 @@ details {
 .st-table {
 	vertical-align: start;
 	border: none;
-	margin: auto;
 }
 
 .st-atlas {
@@ -109,4 +104,28 @@ details {
 	}
 }
 
+#ca-demo {
+	& td {
+		text-align: center;
+		width: 3ch;
 
+		&[data-t="1"], &:has(:checked) {
+			background-color: var(--tint);
+		}
+	}
+
+	& label {
+		display: inline-block;
+		width: 100%;
+		&:has(:checked)::before {
+			content: "1";
+		}
+		&:not(:has(:checked))::before {
+			content: "0";
+		}
+
+		& input {
+			display: none;
+		}
+	}
+}
