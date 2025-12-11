@@ -45,6 +45,12 @@ body {
 	background-color: var(--bg);
 }
 
+@media screen and (max-width: 1200px) {
+	body {
+		flex-direction: column;
+	}
+}
+
 div.column {
 	display: flex;
 	flex-direction: column;
@@ -91,7 +97,7 @@ details {
 
 .st-atlas {
 	--p: 0px 0px;
-	background: url("assets/st-atlas.webp");
+	background: url("assets/st-atlas-smol.webp");
 	background-size: 256px;
 	display: inline-block;
 	height: 64px;
