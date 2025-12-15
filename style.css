@@ -71,11 +71,14 @@ table {
 details {
 	border: var(--border);
 	padding: 5px;
-	cursor: pointer;
 
 	&:has(summary:hover) {
 		background-color: var(--tint);
 	}
+}
+
+summary {
+	cursor: pointer;
 }
 
 .st-table td {

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="730.25195"
+   height="730.25195"
+   viewBox="0 0 730.25195 730.25195"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1" />
+  <g
+     id="layer1"
+     transform="translate(-2650.1938,-344.94202)">
+    <g
+       id="g109">
+      <path
+         d="m 2857.7564,394.94202 -157.5625,157.56445 v 157.5625 157.5625 l 157.5625,157.56253 h 157.5625 157.5625 L 3330.4458,867.63147 V 710.06897 552.50647 L 3172.8814,394.94202 h -157.5625 z"
+         style="fill:none;stroke:#ffffff;stroke-width:100;stroke-linecap:square;stroke-linejoin:round;stroke-dasharray:none"
+         id="path114" />
+      <path
+         style="fill:#5fd38d;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 2700.1939,552.50647 157.5625,-157.56445 h 157.5625 v 157.56445 l -157.5625,157.5625 h -157.5625 z"
+         id="path102" />
+      <path
+         style="fill:#87deaa;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 3015.3189,552.50647 157.5625,157.5625 h 157.5645 V 552.50647 L 3172.8814,394.94202 h -157.5625 v 157.56445"
+         id="path103" />
+      <path
+         style="fill:#2ca05a;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="M 3015.3189,867.63147 V 1025.194 h 157.5625 l 157.5645,-157.56253 v -157.5625 h -157.5645 z"
+         id="path104" />
+      <path
+         style="fill:#217844;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 2857.7564,710.06897 h -157.5625 v 157.5625 l 157.5625,157.56253 h 157.5625 V 867.63147 l -157.5625,-157.5625"
+         id="path105" />
+      <path
+         style="fill:#37c871;stroke:none;stroke-width:40;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:none"
+         d="m 2857.7564,710.06897 157.5625,157.5625 157.5625,-157.5625 -157.5625,-157.5625 z"
+         id="path106" />
+    </g>
+  </g>
+</svg>
