@@ -96,11 +96,11 @@ summary {
 .st-atlas {
 	--p: 0px 0px;
 	background: url("assets/st-atlas.webp");
-	background-size: 256px;
+	background-size: 256px 320px;
+	background-position: var(--p);
 	display: inline-block;
 	height: 64px;
 	width: 64px;
-	background-position: var(--p);
 
 	& + & {
 		margin-left: 14px;
