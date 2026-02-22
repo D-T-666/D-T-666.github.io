@@ -2,8 +2,12 @@
 	--fg: black;
 	--bg: transparent;
 	--tint: #0002;
-	--section-border: 4px ridge #35a656;
+	--section-border: 4px solid #35a656;
 	--border: 1px solid #35a656;
+
+	--section-width: 40rem;
+	--spacing: 20px;
+	--side-bar-width: 28rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -11,7 +15,7 @@
 		--fg: white;
 		--bg: #1b1f1c;
 		--tint: #333d36;
-		--section-border: 4px ridge #633006;
+		--section-border: 4px solid #633006;
 		--border: 1px solid #633006;
 	}
 
@@ -25,20 +29,46 @@
 }
 
 body {
+	position: relative;
 	width: fit-content;
-	margin: 20px auto;
+	margin: var(--spacing) auto;
+
 	display: flex;
-	gap: 20px;
+	gap: var(--spacing);
+
 
 	font-family: monospace;
-	font-size: 12px;
+	font-size: 16px;
 
 	color: var(--fg);
 	background-color: var(--bg);
 }
 
-@media screen and (max-width: 1200px) {
+main {
+	display: flex;
+	gap: var(--spacing);
+}
+
+aside {
+	height: fit-content;
+	width: var(--side-bar-width);
+}
+
+@media screen and (min-width: 1044px) {
+	aside {
+		position: sticky;
+		top: var(--spacing);
+	}
+}
+
+@media screen and (max-width: 1044px) {
 	body {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 100rem) {
+	main {
 		flex-direction: column;
 	}
 }
@@ -46,13 +76,13 @@ body {
 div.column {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+	gap: var(--spacing);
 }
 
 section {
 	border: var(--section-border);
-	padding: 10px 20px;
-	width: 70ch;
+	padding: 10px var(--spacing);
+	width: var(--section-width);
 	box-sizing: content-box;
 }
 
@@ -66,6 +96,16 @@ table, th, td {
 
 table {
 	margin: auto;
+
+	figure & {
+		/*width: 100%;*/
+		& td {
+			text-align: center;
+			& pre {
+				text-align: left;
+			}
+		}
+	}
 }
 
 details {
@@ -79,6 +119,40 @@ details {
 
 summary {
 	cursor: pointer;
+}
+
+img {
+	width: 100%;
+
+	figure & {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+figcaption {
+	margin-top: 0.5rem;
+	text-align: center;
+}
+
+hr {
+	width: 100%;
+}
+
+code {
+	border: 1px solid var(--tint);
+	padding: 1px 2px;
+	border-radius: 3px;
+	background-color: var(--tint);
+
+	pre & {
+		padding-right: 4ch;
+		display: block;
+	}
+}
+
+div.center {
+	text-align: center;
 }
 
 .st-table td {

@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../style.css">
+	</head>
+	<body>
+		<aside>
+			<h1>Contents</h1>
+			The list of projects on this page is in chronological order.
+			<ol>
+				<li><a href="#turtle-3d">3D renderer with turtle</a></li>
+				<li><a href="#turing-assembly">Turing assembly</a></li>
+				<li><a href="#simple-raytracer">Simple raytracer</a></li>
+				<li><a href="#wfc">Wave Function Collapse in p5.js</a></li>
+				<li><a href="#rocket-sim">Rocket sim</a></li>
+				<li><a href="#cxrili">Cxrili</a></li>
+				<li><a href="#manim-video">Math explainer with Manim</a></li>
+				<li><a href="#trols">TRoLS</a></li>
+				<li><a href="#enveloper">Enveloper</a></li>
+				<li><a href="#newton-fractal">Newton fractal renderer</a></li>
+				<li><a href="#lingutree">Linguistic tree renderer</a></li>
+				<li><a href="#repr">Repr</a></li>
+				<li><a href="#rust-rl">Deep Reinforcement Learning in Rust</a></li>
+			</ol>
+		</aside>
+
+		<main>
+			<div class="column">
+				<section id="turtle-3d">
+					<h2>3D renderer with turtle (<a href="https://github.com/D-T-666/3D-turtle">GitHub</a>)</h2>
+					<h6>May, 2020</h6>
+
+					<p>
+					As the pandemic set in and almost every country went into
+					lockdown, I got to stay at home more often. That's when I
+					discovered Discord servers (and that is also when
+					<a href="https://thecodingtrain.com/">The Coding Train</a>
+					made one). That is where I met a lot of very cool people 
+					who I still talk to today. One of those cool peeps was
+					Simon, with whom I worked on this project.
+					</p>
+					
+					<p>
+					This small python program takes in a 3D model as a simple
+					OBJ file and uses pythons turtle graphics to render it
+					edge-by-edge.
+					</p>
+
+					<figure>
+						<img src="https://github.com/D-T-666/3D-turtle/raw/master/3D-turtle.gif">
+					</figure>
+					
+					<p>
+					As you can see in the GIF, it also has some controls
+					implemented with
+					<a href="https://en.wikipedia.org/wiki/Tkinter">Tkinter</a>.
+					</p>
+					
+					<p>
+					It's funny to me now that the <code>run.py</code> and
+					<code>saferun.py</code> are basic shell commands run
+					through Python's <code>os</code> package
+					</p>
+
+					<pre><code>import os
+os.system('python src')</code></pre>
+
+					<pre><code>import os
+os.system('cls')
+os.system('start run.py')</code></pre>
+
+					<p>
+					I clearly didn't know that .sh/.bat files existed and I was
+					still using Windows.
+					</p>
+				</section>
+
+				<section id="turing-assembly">
+					<h2>turing-assembly (<a href="https://github.com/D-T-666/turing-assembly">GitHub</a>)</h2>
+					<h6>May, 2020</h6>
+
+					<p>
+					After learning about
+					<a href="https://en.wikipedia.org/wiki/Assembly_language">assembly</a>,
+					I thought to myself, how fun would it be if I were to write
+					my own <i>interpreter</i> for a custom
+					<a href="https://en.wikipedia.org/wiki/Instruction_set_architecture">instruction set</a>.
+					So I did it.
+					</p>
+
+					<p>
+					The instruction set, as expected from a 15-year-old with
+					practically no understanding of computer architecture, was
+					very simple but still turing complete (hence the name).
+					There was only one register, a program counter and 256
+					<a href="https://en.wikipedia.org/wiki/Word_(computer_architecture)">words</a>
+					of memory. The coolest thing about it was that I clearly
+					struggled with jumps (I didn't implement labels for some
+					reason) so I had to implement both relative and absolute
+					jumps to make writing using this instruction set easier.
+					I also implemented <a href="https://en.wikipedia.org/wiki/Input/output">I/O</a> as
+					by having a print instruction and having special registers
+					<code>TERMINAL_WIDTH</code> and <code>TERMINAL_HEIGHT</code>.
+					</p>
+
+					<p>
+					Just the interpreter of an instruction set is nothing cool
+					to see so I also wrote a couple test programs. One was a
+					renderer of the mandelbrot set
+					</p>
+
+					<figure>
+						<img src="https://raw.githubusercontent.com/D-T-666/turing-assembly/master/mandelbrot-output.png">
+						<figcaption>
+							Ascii rendering of the <a href="https://en.wikipedia.org/wiki/Mandelbrot_set">Mandelbrot Set</a>
+							around <math>-0.61102201 - 0.611013426<mi>i</mi></math>.
+						</figcaption>
+					</figure>
+				</section>
+
+				<section id="simple-raytracer">
+					<h2>Simple Raytracer (<a href="https://github.com/D-T-666/simple-raytracer">GitHub</a>)</h2>
+					<h6>September, 2020</h6>
+
+					<p>
+					If you've seen
+					<a href="https://www.youtube.com/@SebastianLague">Sebastian Lague</a>'s
+					<a href="https://youtu.be/9RHGLZLUuwc">video</a>,
+					then you must have also had an incling to implement a
+					simple raytracer. I did it. It was fun. 
+					</p>
+
+					<figure>
+						<img src="https://github.com/D-T-666/simple-raytracer/raw/master/out.png">
+						<figcaption>
+							The output of the program
+						</figcaption>
+					</figure>
+				</section>
+
+				<section id="wfc">
+					<h2>wave-function-collapse-p5 (<a href="https://github.com/D-T-666/wave-function-collapse-p5">GitHub</a>)</h2>
+					<h6>October-December, 2020</h6>
+
+					<p>
+					Probably the coolest computer graphics/game dev things I've
+					seen all come from
+					<a href="https://oskarstalberg.tumblr.com/">Oskar Stålberg</a>.
+					Both of his major releases
+					(<a href="https://www.badnorth.com/">Bad North</a>
+					<a href="https://www.townscapergame.com/">Townscaper</a>),
+					his talks
+					(<a href="https://youtu.be/1hqt8JkYRdI">1</a>,
+					<a href="https://youtu.be/0bcZb-SsnrA">2</a>,
+					<a href="https://youtu.be/NpfoRAzfGDg">3</a>),
+					and posts.
+					Most of it is about the
+					<a href="https://en.wikipedia.org/wiki/Model_synthesis">Wave Function Collapse</a>
+					algorithm.
+					</p>
+
+					<p>
+					Me and my friend <a href="https://maxi.millian.se/">Max</a>
+					got interested and implemented
+					<a href="https://en.wikipedia.org/wiki/Model_synthesis#Gumin's_implementation">
+						Gumin's version</a>
+					in
+					<a href="https://p5js.org/">p5.js</a>.
+					And that is before The Coding Train did a
+					<a href="https://youtu.be/5iSAvzU2WYY">coding challenge</a>
+					about it!
+					</p>
+
+					<figure>
+						<img src="https://github.com/d-t-666/wave-function-collapse-p5/raw/main/data/wfc-0.1.1.gif"/>
+						<figcaption>
+							Execution of the program.
+						</figcaption>
+					</figure>
+				</section>
+
+				<section id="rocket-sim">
+					<h2>rocket-sim (<a href="https://github.com/D-T-666/rocket-sim">GitHub</a>)</h2>
+					<h6>January, 2021</h6>
+
+					<p>
+					After seeing the absolutely awestriking footage of huge rockets
+					landing on barges and on landing sites, I've had a drive to
+					build something similar. Due to my limited exposure to the
+					hardware side of engineering, it was only natural for me to
+					find ways of doing it all in software.
+					</p>
+
+					<p>
+					In the winter of 2021, I set to implement a simple, just one
+					dimensional version of what to my mind is one of the coolest
+					videos depicting human ingenuity
+					<a href="https://youtu.be/9ZDkItO-0a4">SpaceX's Grasshopper</a>,
+					<a href="">Starhopper</a> and
+					<a href="">early starship flight tests</a>.
+					</p>
+
+					<figure>
+					<a href="https://starship-spacex.fandom.com/wiki/SN5">
+						<img src="https://static.wikia.nocookie.net/starship-spacex/images/2/2e/SN5_hop_test.jpg">
+					</a>
+					<figcaption>Starship SN5 Flight</figcaption>
+					</figure>
+
+					<p>
+					The goal was simple: have a model of a rocket, with parameteres
+					(engine thrust, vihicle wet/dry weight) estimated from the
+					publically available data, obeying neutonian physics and a
+					control system that would take the rocket to hover and then
+					safely land it back on the ground.
+					</p>
+
+					<p>
+					I started building this simulation without having any knowledge
+					of control systems. I didn't really know they were a thing,
+					even. This ignorance led me to reinvent the <i>PD</i> control
+					scheme
+					(<a href="https://en.wikipedia.org/wiki/Proportional%E2%80%93integral%E2%80%93derivative_controller">PID</a>
+					controller but with
+					<math><msub><mi>P</mi><mi>I</mi></msub><mo>=</mo><mn>0</mn></math>)
+					for maintaining hover. After some time, I started researching
+					different control schemes for such a task and learned about the
+					classical and elegant PID controller.
+					</p>
+
+					<p>
+					After fiddling with the simulation and looking at the number in
+					the terminal, it came time to visualize the results. Even
+					though I had quite a lot of experience with
+					<a href="https://p5js.org/">p5.js</a>
+					by this point, I chose to create a static visualization for
+					this project (which, in hindsight, was nicer for presenting it
+					in this format).
+					</p>
+
+					<figure>
+						<a href="https://raw.githubusercontent.com/D-T-666/rocket-sim/main/plots/fig-refreshing.png">
+							<img src="https://raw.githubusercontent.com/D-T-666/rocket-sim/main/plots/fig-refreshing.png">
+						</a>
+						<figcaption>The output of the program</figcaption>
+					</figure>
+
+					<p>
+					These graphs all depict different variables of a single flight.
+					I still feel happy looking at this image :)
+					</p>
+
+					<p>
+					The fun in doing this project was amplified by the fact that I did it with a friend
+					<a href="https://maxi.millian.se/">Max</a>
+					</p>
+				</section>
+
+				<section id="cxrili">
+					<h2>Cxrili (<a href="https://cxrili.netlify.app">Website</a>)</h2>
+					<h6>February-May, 2021</h6>
+
+					<p>
+					In the 11th grade, the frustration caused by poor
+					management of teachers and everchanging class schedule has
+					one solution that I could be a part of &mdash; a centralized
+					calendar system for the whole school. You might say "yes,
+					<a href="https://en.wikipedia.org/wiki/CalDAV">CalDAV</a>
+					exists basically for just that" and you'd be right, but I
+					had no idea it did at that time.
+					</p>
+
+					<p>
+					So I did what was only natural &mdash; I built a calendar app
+					for my class. I used some proprietary services to add an
+					account system and then the ability to make comments on
+					each period with the purpose of sharing what we had for
+					homework. And centralization meant that if the schedule
+					were to change, I would update it and everyone would have
+					the most recent version immediately.
+					</p>
+
+					<p>
+					At some point, about 4 of my 25 classmates were using the
+					app, which was about as much as I could ask for in
+					retrospect. However, as they say "it's the journey, not the
+					destination". I have a very fun memory of finding a
+					critical bug at school and fixing it from my phone and
+					using GitHub web editor.
+					</p>
+				</section>
+
+				<section id="manim-video">
+					<h2>Math explainer with Manim (<a href="https://github.com/D-T-666/manim-videos">GitHub</a>)</h2>
+					<h6>November, 2021</h6>
+
+					<p>
+					When I learned that the author of my favorite mathematics
+					related Youtube channel,
+					<a href="https://www.youtube.com/@3blue1brown">3Blue1Brown</a>,
+					had made a python library which he uses for creating the
+					videos, I took a deep dive and made
+					<a href="https://youtu.be/vZJi6EG6cRs">a video of my own</a>.
+					</p>
+
+					<figure>
+						<img src="https://github.com/D-T-666/manim-videos/raw/main/height-of-a-right-angle-triangle/thumbnail.jpg">
+						<figcaption>
+							The thumbnail of the video I made.
+						</figcaption>
+					</figure>
+				</section>
+
+				<section id="trols">
+					<h2>Tunable Rocket Landing Simulation (<a href="https://github.com/D-T-666/TRoLS">GitHub</a>)</h2>
+					<h6>November-December, 2021</h6>
+
+					<p>
+					Later in 2021, inspired by
+					<a href="https://thomasgodden.com/">Thomas Godden</a>'s
+					<a href="https://thomas-godden.medium.com/how-spacex-lands-starship-sort-of-ee96cdde650b">
+					article about Starship Landing Trajectory Optimization</a>
+					which was in turn (as the title says) based on SpaceX's
+					<a href="https://youtu.be/ODY6JWzS8WU?t=5m40s">Starship test flights</a>,
+					I set out to implement a two dimensional version of my one
+					dimensional rocket simulation.
+					</p>
+
+					<p>
+					Thomas Godden's article was my introduction to the idea of
+					<a href="https://en.wikipedia.org/wiki/Mathematical_optimization"> mathematical optimization</a>.
+					Even though this project doesn't use any of the technics
+					that optimization theory studies, my awareness of the whole
+					field later enforced my motivation to go to
+					<a href="https://kiu.edu.ge/">KIU</a>.
+					</p>
+
+					<p>
+					The secondary goal of this project was to make it
+					<i>tunable</i>, so that you could input parameters (rocket
+					size, weight, starting position, ...) and the simulation
+					would just calculate the flight trajectory that would safely
+					land your rocket.
+					</p>
+
+					<p>
+					I had already been familiar with the beautifuly simple
+					<a href="https://en.wikipedia.org/wiki/API">API</a>
+					of
+					<a href="https://www.youtube.com/@javidx9">olc</a>::<a href="https://github.com/OneLoneCoder/olcPixelGameEngine">PixelGameEngine</a>
+					and therefore I knew my way around
+					<a href="https://en.wikipedia.org/wiki/C++">C++</a>.
+					To spice things up a bit, I wanted to learn something new,
+					so I went with <a href="https://raylib.com/">Raylib</a>.
+
+					<figure>
+						<img src="https://github.com/D-T-666/trols/raw/main/small.gif" >
+						<figcaption>Screen recording of the program running</figcaption>
+					</figure>
+
+					<p>
+					What I ended up implementing is a simple
+					<a href="https://en.wikipedia.org/wiki/Model_predictive_control">
+						Model Predictive Control</a>
+					scheme without konwing it. The idea is simple:
+					</p>
+					<ol>
+						<li>Simulate every possible sequence of controls for
+							some <math><mi>n</mi></math> steps,</li>
+						<li>score each possible outcome based on a cost
+							function,</li>
+						<li>and then pick the first action from the sequence of
+							actions which had the best score.</li>
+					</ol>
+					<p>
+					A traditional MPC scheme would use a clever optimization
+					algorithm which doesn't require exhaustive, brute-force
+					simulation of all possible outcomes.
+					</p>
+				</section>
+
+				<section id="enveloper">
+					<h2>Enveloper (<a href="https://github.com/D-T-666/enveloper">GitHub</a>)</h2>
+					<h6>December, 2021</h6>
+
+					<p>
+					As 2022 was approaching, I made a collage of pictures of key
+					moments of the year as new year's gifts for my friends. To
+					wrap it, I wanted to put my coding skills to use and make
+					something cool. So I made this small tool.
+					</p>
+
+					<p>
+					Enveloper uses two pictures and some parameters to create a
+					printable page which when printed and cut out, folds into an
+					envelope of predetermined size. You can
+					<a href="https://d-t-666.github.io/enveloper/">Try it out</a>
+					here.
+					</p>
+				</section>
+
+				<section id="newton-fractal">
+					<h2>Newton Fractal Renderer (<a href="https://github.com/D-T-666/newton-fractal">GitHub</a>)</h2>
+					<h6>January, 2022</h6>
+
+					<p>
+					This simple <i>multithreaded</i> C++ program renders the
+					<a href="https://en.wikipedia.org/wiki/Newton_fractal">Newton fractal</a>,
+					nothing special.
+					</p>
+
+					<figure>
+						<img src="https://github.com/D-T-666/newton-fractal/raw/main/out.png">
+						<figcaption>
+							The output of the program.
+						</figcaption>
+					</figure>
+				</section>
+
+				<section id="lingutree">
+					<h2>Linguistic tree renderer (<a href="https://github.com/D-T-666/lingutree">GitHub</a>)</h2>
+					<h6>October, 2022</h6>
+
+					<p>
+					In the first semester of my bachelors, I had to draw a
+					<a href="https://en.wikipedia.org/wiki/Parse_tree">derivation tree</a>
+					of a couple lines of code. I didn't want to
+					do it by hand so I tried using
+					<a href="https://en.wikipedia.org/wiki/LaTeX">LaTeX</a>,
+					but it didn't do for
+					me so I wrote a renderer of my own. I would give it the tree
+					in a simple format and it would produce a PNG.
+					</p>
+
+					<figure>
+						<table>
+							<thead>
+								<tr>
+									<td>Input</td>
+									<td>Output</td>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<pre><code>[
+    This-is-a-tree
+    [
+        A-child-node
+        [
+            Leaf
+        ]
+    ]
+    [
+        Leaf
+    ]
+]</code></pre>
+									</td>
+									<td>
+										<img src="https://github.com/D-T-666/lingutree/raw/main/out.png" style="width:16rem">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<figcaption>
+							An example result of the program
+						</figcaption>
+					</figure>
+				</section>
+
+				<!-- This is when the LLMs started writing code. -->
+
+				<section id="repr">
+					<h2>Repr (<a href="https://github.com/D-T-666/repr">GitHub</a>)</h2>
+					<h6>May, 2025</h6>
+
+					<p>
+					One day, when chatting with my friend
+					<a href="https://ischa.dev">Ischa</a>,
+					We came up with this fun piece of mathematics. After a long
+					discussion, we finally landed on a question: what is the
+					minimual subset of natural numbers can you take to be able
+					to express any natural number greater than 1 with writing
+					<math><mi>a</mi></math> in base <math><mi>b</mi></math> and
+					reading it in base <math><mi>c</mi></math>. Where
+					<math><mi>a</mi></math>, <math><mi>b</mi></math>, and
+					<math><mi>c</mi></math> are from the set
+					</p>
+
+					<p>
+					Later that day, I decided to formalize the concepts and put
+					all of our itty-bitty discoveries in one neat PDF.
+					</p>
+				</section>
+
+				<section id="rust-rl">
+					<h2>Deep Reinforcement Learning in Rust (<a href="https://gitlab.com/taraxac/deep-rl-in-rust">GitHub</a>)</h2>
+					<h6>January, 2026</h6>
+
+					<p>
+					As a final project for the deep learning course at my uni,
+					we had the freedom of choice as to what I would do. So I
+					chose to build a small Deep Q-learning with Convolutional
+					layers. I had a friend <a href="">Giorgi Bakradze</a> who
+					was willing to do this as a group project. Then implemented
+					the classic game of Pong as the environment where the model
+					would train through self-play.
+					</p>
+
+					<figure>
+						<img
+							src="https://gitlab.com/taraxac/deep-rl-in-rust/-/raw/main/anim.gif"
+							style="width: 12rem">
+						<figcaption>
+							The model playing pong against itself.
+						</figcaption>
+					</figure>
+
+					Although the implementation had some clear flaws, like a
+					poor reward function and 
+				</section>
+			</div> <!-- column -->
+		</main>
+	</body>
+</html>
