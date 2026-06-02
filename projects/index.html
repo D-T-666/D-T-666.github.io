@@ -15,6 +15,7 @@
 				<li><a href="#wfc">Wave Function Collapse in p5.js</a></li>
 				<li><a href="#rocket-sim">Rocket sim</a></li>
 				<li><a href="#cxrili">Cxrili</a></li>
+				<li><a href="#marchdelbrot">Marched Mandelbrot</a></li>
 				<li><a href="#manim-video">Math explainer with Manim</a></li>
 				<li><a href="#trols">TRoLS</a></li>
 				<li><a href="#enveloper">Enveloper</a></li>
@@ -291,6 +292,36 @@ os.system('start run.py')</code></pre>
 					</p>
 				</section>
 
+				<section id="marchdelbrot">
+					<h2>Marched Mandelbrot (<a href="https://dt6.itch.io/mandelbrot">itch.io</a>)</h2>
+					<h6>April 2021</h6>
+					
+					<p>
+					Having gained the insight in how <i>smooth</i> meshes are
+					usually constructed from volumetric data, I knew what I
+					needed to do instantly: use marching squares to render the
+					contour of the mandelbrot set. I used my trusty tool, the
+					<a href="https://www.youtube.com/@javidx9">olc</a>::<a href="https://github.com/OneLoneCoder/olcPixelGameEngine">PixelGameEngine</a>
+					to code this up and then used
+					<a href="https://emscripten.org/">emscripten</a>
+					to compile it to
+					<a href="https://webassembly.org/">WebAssembly</a>.
+					</p>
+
+					<figure>
+						<img src="../assets/marchdelbrot.png">
+						<figcaption>
+							A region of the mandelbrot set rendered using this
+							tool.
+						</figcaption>
+					</figure>
+
+					<p>
+					This is one of my coolest original ideas which I have yet
+					to find somewhere else.
+					</p>
+				</section>
+
 				<section id="manim-video">
 					<h2>Math explainer with Manim (<a href="https://github.com/D-T-666/manim-videos">GitHub</a>)</h2>
 					<h6>November, 2021</h6>
@@ -518,7 +549,8 @@ os.system('start run.py')</code></pre>
 					</figure>
 
 					Although the implementation had some clear flaws, like a
-					poor reward function and 
+					poorly chosen reward function, it demonstrates the learning
+					ability and is quite performant.
 				</section>
 			</div> <!-- column -->
 		</main>
