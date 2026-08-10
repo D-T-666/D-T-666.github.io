@@ -34,10 +34,10 @@
 					<h2>Education</h2>
 
 					<p>
-					I am currently in my 4th year of computer science bachelors at
-					<a href="https://kiu.edu.ge">Kutaisi International University</a>. I am also
-					doing a minor in mathematics. My cumulative GPA up to present is
-					<code>3.68</code>.
+					I have finished my bachelor's degree in Computer Science at
+					<a href="https://kiu.edu.ge">Kutaisi International University</a>
+					with a minor in mathematics. My final GPA is
+					<code>3.75</code>.
 					</p>
 				</section>
 
@@ -45,9 +45,17 @@
 					<h2>Work Experience</h2>
 
 					<p>
-					I am currently a full Stack Engineer at <a href="https://ncer.gov.ge">NCER</a>
-					(the National Center for Educational Research). I'm working on an open source
-					assessment system pipeline for Georgian schools.
+					I am a network engineer at Noxar, a Georgian startup.
+					I work on the design of a power-efficient tree-topology network
+					protocol and help with the Rust implementation for the product
+					devices.
+					</p>
+
+					<p>
+					I was a full Stack Engineer at <a href="https://ncer.gov.ge">NCER</a>
+					(the National Center for Educational Research) for 2 years. 
+					I worked on an open source assessment system pipeline for Georgian 
+					schools.
 					</p>
 
 					<p>
@@ -81,11 +89,12 @@
 					<h2>Bachelor's thesis</h2>
 
 					<p>
-					I am currently working on my Bachelor's thesis titled "Numerical Methods
+					I worked on my Bachelor's thesis titled "Numerical Methods
 					for Periodic Optimal Control Problems" with a friend
 					<a href="https://www.linkedin.com/in/davit-khantadze-a1bb3b300/">Davit Khantadze</a>
 					under the supervision of
 					<a href="https://www.professoren.tum.de/en/vexler-boris">Prof. Boris Vexler</a>.
+					It got a grade of 94/100.
 					</p>
 				</section>
 
@@ -109,7 +118,7 @@
 					As I've found myself interested in learning and creating
 					<i>computer stuff</i> (be it visualizations of neat mathematics
 					or simulations) from early ages of my life, I've got quite a
-					few projects I can display. Allthough many of them are not
+					few projects I can display. Although many of them are not
 					finished and can't be appreciated by just looking at pretty
 					visuals, there still is a small story behind each of them.
 					</p>
@@ -443,12 +452,15 @@
 
 		<script>
 			// Update my age
-			const myBirthday = new Date(2004, 06, 12);
-			const myAge = new Date(Date.now() - myBirthday.getTime());
 			const myAgeElement = document.getElementById("my-age");
-			myAgeElement.innerText = String(myAge.getUTCFullYear() - 1970);
+			function calculate_age(dob) { 
+				let diff_ms = Date.now() - dob.getTime();
+				let age_dt = new Date(diff_ms); 
+				return Math.abs(age_dt.getUTCFullYear() - 1970);
+			}
+			myAgeElement.innerText = String(calculate_age(new Date(2004, 12, 6)));
 
-			// Shuffle friends
+			// Shuffle lists
 			for (const elt of document.getElementsByClassName("shuffle")) {
 				const list = [...elt.childNodes].sort(() => Math.random() - 0.5);;
 				elt.innerHTML = "";
